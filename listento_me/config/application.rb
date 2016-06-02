@@ -1,4 +1,4 @@
-*=require_self
+
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -6,7 +6,7 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-config.assets.enabled = true
+
 
 module ListentoMe
   class Application < Rails::Application
