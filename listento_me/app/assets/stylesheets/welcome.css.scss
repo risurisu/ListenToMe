@@ -1,5 +1,5 @@
 #background {
-  background-image: url(../images/podcasthomepage.jpg);
+  background-image: url('podcasthomepage.jpg');
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -10,7 +10,7 @@
       float: left;
       text-transform: uppercase;
       font-weight: 700;
-      color: $white;
+      color: white;
       text-decoration: none;
     }
     nav {
@@ -22,7 +22,7 @@
           display: inline;
           margin-left: 2.5rem;
           a {
-            color: $white;
+            color: white;
             text-decoration: none;
           }
         }
@@ -30,7 +30,7 @@
     }
   }
   h1 {
-    color: $white;
+    color: white;
     font-size: 3.5rem;
     font-weight: 300;
     letter-spacing: 1px;
