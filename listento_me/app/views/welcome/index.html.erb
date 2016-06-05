@@ -3,13 +3,22 @@
   <a href="index.html" id="logo">ListenTo.me</a>
   <nav>
     <ul>
-      <li><a href="#">Find</a></li>
-      <li><a href="#">Sign In</a></li>
-      <li><a href="#">Create a Podcast</a></li>
+      <% unless podcast_signed_in? %>
+      <li><%= link_to "Find", podcasts_path %></li>
+      <li><%= link_to "Sign In", new_podcast_session_path %></li>
+      <li><%= link_to "Create a Podcast", new_podcast_registration_path %></li>
+    <% else %>
+      <li><a href="#">Dashboard</a></li>
+      <li><%= link_to "Find", podcasts_path %></li>
+      <li><%= link_to "Sign Out", destroy_podcast_session_path, method: :delete %></li>
+      <% end %>
     </ul>
   </nav>
 </header>
+<div class="wrapper_skinny">
 <h1>Search for podcasts or upload your own</h1>
-<a href="#" class="button button_highlight">Create a Podcast</a>
-<a href="#" class="button button_white">Find</a>
+<%= link_to "Create a Podcast", new_podcast_registration_path, class: "button button_highlight" %>
+<%= link_to "Find", podcasts_path, class: "button button_white" %>
+
+</div>
 </div>
